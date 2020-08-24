@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: red;
+    overflow: hidden;
+}
+
+.gamecontainer {
+    background-image: url(../images/bg\ game.png);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    width: 100%;
+    height: 100vh;
+}
+
+.player {
+    background-image: url(../images/rm.png);
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 124px;
+    position: absolute;
+    bottom: 133px;
+    left: 113px;
+    background-size: cover;
+}
+
+.obstacle {
+    background-image: url(../images/s2.png);
+    background-size: cover;
+    width: 149px;
+    height: 138px;
+    position: absolute;
+    bottom: 133px;
+    left: 57vw;
+}
+
+.animateplayer {
+    animation: player 0.8s linear;
+}
+
+.obstacleani {
+    animation: obstacleani 5s linear infinite;
+}
+
+.gameover {
+    position: relative;
+    top: 63px;
+    font-size: 40px;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgba(7, 36, 7, 0.877);
+}
+
+#scorcount {
+    position: absolute;
+    right: 23px;
+    top: 27px;
+    padding: 10px;
+    width: 150px;
+    border: 4px solid green;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+@keyframes player {
+    0% {
+        bottom: 133px;
+    }
+    50% {
+        bottom: 400px;
+    }
+    100% {
+        bottom: 133px;
+    }
+}
+
+@keyframes obstacleani {
+    0% {
+        left: 100vw;
+    }
+    100% {
+        left: -10vw;
+    }
+}
